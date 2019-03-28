@@ -28,6 +28,7 @@ def checkPassword(password):
     
     print('Great! Your password is safe enough!')
 
+# test
 s = ['Woailajsfl1854', 'woailajsfl1854',
  'jgjgla', 'waolaslghlaj', 'WOGHLG199']
 for i in range(len(s)):
