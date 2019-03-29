@@ -125,3 +125,5 @@ dmypy.json
 # vscode
 *.vscode
 *~
+*.zip
+automate_online-materials

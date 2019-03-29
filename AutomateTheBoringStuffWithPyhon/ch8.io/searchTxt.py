@@ -17,16 +17,18 @@ if os.path.exists(path):
     #os.chdir(path)
     name = input('Please input the regex you want to use:\n')
     nameRegex = re.compile(r'' + name)
-    textRegex = re.compile(r'\w+.txt')
+#    textRegex = re.compile(r'\w+.txt')
     filename = os.listdir(path)
     # check the file is a text file
     for file in filename:
-        if textRegex.search(file):
+        if file.endswith('.txt'):
             with open(file) as f:
                 content = f.readlines()
                 # check if the line is ok
                 for line in content:
                     if nameRegex.search(line):
                         print(line)
+                    else:
+                        print('No such line.')
 else:
     print('The path does not exist.')
