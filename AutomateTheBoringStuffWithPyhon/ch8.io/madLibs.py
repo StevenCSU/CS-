@@ -4,7 +4,8 @@ import sys
 
 # open the file
 filename = sys.argv[1]  
-resultName = filename + '-result'
+name = filename.split('.')
+resultName = name[0] + '-result.txt'
 resultContent = ''
 with open(filename) as f:
     content = f.readlines()
@@ -25,7 +26,8 @@ with open(filename) as f:
                 adverb = input('Enter an adverb:\n')
                 l[i] = adverb
         resultLine = ' '.join(l)
-        resultContent += resultLine
+        resultContent += resultLine 
+        resultContent += ' '
 
 # write into a new text
 with open(resultName, 'w') as r:
