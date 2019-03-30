@@ -1,6 +1,9 @@
 # lucky.py - Opens several Duckduckgo search results.
 
-import requests, sys, webbrowser, bs4
+import requests
+import sys
+import webbrowser
+import bs4
 
 print('Ducking...')
 res = requests.get('https://duckduckgo.com/search?q=' + '+'.join(sys.argv[1:]))
