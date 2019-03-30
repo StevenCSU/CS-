@@ -123,7 +123,9 @@ dmypy.json
 .pyre/
 
 # vscode
-*.vscode
+.vscode
 *~
 *.zip
 automate_online-materials
+xkcd
+asp
