@@ -3,6 +3,7 @@
 
 import re
 
+
 def checkPassword(password):
     # check digits
     if len(password) < 8:
@@ -12,25 +13,25 @@ def checkPassword(password):
     upperRegex = re.compile(r'[A-Z]+')
     lowerRegex = re.compile(r'[a-z]+')
     digitRegex = re.compile(r'\d+')
-    if upperRegex.search(password) == None:
+    if upperRegex.search(password) is None:
         print('Your password must have uppercase letter.')
         return False
 
     # check Lower case
-    if lowerRegex.search(password) == None:
-        print('Your password must have lowercase letter.') 
+    if lowerRegex.search(password) is None:
+        print('Your password must have lowercase letter.')
         return False
 
     # check if there is number
-    if lowerRegex.search(password) == None:
+    if lowerRegex.search(password) is None:
         print('Your password must have digit.')
         return False
-    
+
     print('Great! Your password is safe enough!')
 
 # test
 s = ['Woailajsfl1854', 'woailajsfl1854',
- 'jgjgla', 'waolaslghlaj', 'WOGHLG199']
+     'jgjgla', 'waolaslghlaj', 'WOGHLG199']
 for i in range(len(s)):
     print('The safety of ' + s[i] + ' is ')
     checkPassword(s[i])

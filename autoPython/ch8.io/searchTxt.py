@@ -1,20 +1,21 @@
-# searchTxt.py - open all text files under the folder, 
+# searchTxt.py - open all text files under the folder,
 # find the lines that match the Regex.
 # os.chdir() change path
 # os.listdir() return list of filename
-# os.path.exists() return True or False  
+# os.path.exists() return True or False
 # os.path.isdir()  return True or False
-# example:python searchTxt.py <abspath> <regex> 
+# example:python searchTxt.py <abspath> <regex>
 # or python searchTxt.py (leave the pathname and regex to the user)
 
-import os, re
+import os
+import re
 
 # input abspath
 path = input('Please input the abspath you want to search:\n')
 # check if the path exists
 if os.path.exists(path):
     # ask for regular expression
-    #os.chdir(path)
+    # os.chdir(path)
     name = input('Please input the regex you want to use:\n')
     nameRegex = re.compile(r'' + name)
 #    textRegex = re.compile(r'\w+.txt')

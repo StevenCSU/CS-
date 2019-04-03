@@ -2,6 +2,7 @@
 
 import re
 
+
 def stripRe(string, word=' '):
     """
     remove the space around the string(front and after)
