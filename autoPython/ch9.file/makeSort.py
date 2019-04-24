@@ -4,7 +4,9 @@
 # filename.startswith()
 # shutil.move()
 
-import os, shutil
+import os
+import shutil
+
 
 def findMissing(folder, prefix):
     folder = os.path.abspath(folder)
@@ -31,13 +33,13 @@ def findMissing(folder, prefix):
         # shutil.move(os.path.join(folder,file),
         #     os.path.join(folder,newFile))
         start += 1
-    
-    n = 1 
+
+    n = 1
     for file in fileNames:
         suffix = file.split('.')[1]
         newFile = prefix + ('%03d' % n) + '.' + suffix
         print(newFile)
-        shutil.move(os.path.join(folder, file), os.path.join(folder,newFile))
+        shutil.move(os.path.join(folder, file), os.path.join(folder, newFile))
         n += 1
 
 findMissing('./test', 'a')

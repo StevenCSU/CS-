@@ -2,12 +2,14 @@
 # backupToZip.py - Copies an entire folder and its contents into
 # a ZIP file whose filename increments.
 
-import zipfile, os
+import zipfile
+import os
+
 
 def backupToZip(folder):
     # Backup the entire contents of "folder" into a ZIP file.
 
-    folder = os.path.abspath(folder) # make sure folder is absolute
+    folder = os.path.abspath(folder)    # make sure folder is absolute
 
     # Figure out the filename this code should use based on
     # what files already exist.
@@ -29,11 +31,11 @@ def backupToZip(folder):
         backupZip.write(foldername)
         # Add all the files in this folder to the ZIP file.
         for filename in filenames:
-            if filename.startswith(os.path.basename(folder) + '_') and filename.endswith('.zip'):
+            if filename.startswith(os.path.basename(folder) + '_') and
+            filename.endswith('.zip'):
                 continue
             backupZip.write(os.path.join(foldername, filename))
     backupZip.close()
     print('Done.')
 
 backupToZip('/Users/steven/Documents/project/CS-')
- 

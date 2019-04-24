@@ -1,7 +1,9 @@
 # chosenCopy - Copy the specific file(.pdf, .jpg, etc) 
 #               to a new folder
 
-import shutil, os
+import shutil
+import os
+
 
 def chosenCopy(folder, suffix):
     folder = os.path.abspath(folder)
@@ -24,7 +26,6 @@ def chosenCopy(folder, suffix):
             continue
         for filename in filenames:
             if filename.endswith(suffix):
-                shutil.copy(os.path.join(foldername, filename)
-                , destName)
+                shutil.copy(os.path.join(foldername, filename), destName)
 
 chosenCopy('/Users/steven/Downloads', '.pdf')

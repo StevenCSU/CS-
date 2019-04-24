@@ -1,6 +1,7 @@
 import os
 
-for folderName, subfolders, filenames in os.walk('/Users/steven/Documents/project/CS-/AutomateTheBoringStuffWithPyhon'):
+for folderName, subfolders, filenames in os.walk(
+        '/Users/zhangyin/Documents/GitHub/CS-/autoPython'):
     print('The current folder is ' + folderName)
 
     for subfolder in subfolders:

@@ -1,7 +1,8 @@
-# fileSize.py - Find the big file or folder 
+# fileSize.py - Find the big file or folder
 #               return the abs path of these file/folder
 
 import os
+
 
 def fileSize(folder, size):
     folder = os.path.abspath(folder)
