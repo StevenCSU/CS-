@@ -1,4 +1,4 @@
-# chosenCopy - Copy the specific file(.pdf, .jpg, etc) 
+# chosenCopy - Copy the specific file(.pdf, .jpg, etc)
 #               to a new folder
 
 import shutil
